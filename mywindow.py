@@ -154,9 +154,9 @@ class Ui_Form(object):
 
 
 class WorkingThread(QThread):
-    def __init__(self, Ui_Form):
+    def __init__(self, ui_Form: Ui_Form):
         super().__init__()
-        self.app = Ui_Form
+        self.app = ui_Form
 
     def port_scan(self, port):
         target = self.app.get_adress()
